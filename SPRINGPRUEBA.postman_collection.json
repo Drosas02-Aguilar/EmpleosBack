@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "ae4217bb-49b6-4e81-ba5f-ec00bb37af47",
+    "name": "SPRINGPRUEBA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50211303",
+    "_collection_link": "https://go.postman.co/collection/50211303-ae4217bb-49b6-4e81-ba5f-ec00bb37af47?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Consultar todos los empleados",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar Departamentos",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar puestos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/catalogos/puestos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "catalogos",
+            "puestos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar empleado por nombre",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/catalogos/buscar?nombre=Sofía Ramírez Luna",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "catalogos",
+            "buscar"
+          ],
+          "query": [
+            {
+              "key": "nombre",
+              "value": "Sofía Ramírez Luna"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Insertar Empleados",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Juan Lopez Martinez\",\r\n    \"puestoId\": 1,\r\n    \"departamentoId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/empleados/insertar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "empleados",
+            "insertar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar empleado",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/empleados/eliminar/22",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "empleados",
+            "eliminar",
+            "22"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Carga Masiva",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"rutaArchivo\": \"Downloads/Empleados (1).txt\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/empleados/cargar?txt",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "empleados",
+            "cargar"
+          ],
+          "query": [
+            {
+              "key": "txt",
+              "value": null,
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
